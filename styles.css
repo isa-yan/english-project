@@ -1,0 +1,267 @@
+body{
+    margin:0%;
+    font-family:'inter', sans-serif;
+    background-color: rgb(73, 73, 73);
+}
+
+.startpage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100vw;
+    height:100vh;
+}
+
+.landing h1{
+    font-weight:normal;
+    margin-top:0%;
+}
+
+.landing a{
+    background-color:transparent;
+    margin-top:0%;
+}
+
+a div{
+    margin-top:0%;
+}
+
+.starter{
+    display:block;
+    margin:0% 5% 0% 5%;
+    text-align:center;
+    padding:0;
+    position:absolute;
+    animation-name:typewriting;
+    width:fit-content;
+    transform:translateY(-100px);
+    animation: typewriting 4s steps(80,end) forwards, blink 0.7s step-end infinite alternate;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right:3px solid;
+    font-size:42px;
+    opacity:1;
+    color:rgb(183, 183, 183);
+}
+
+.startpage a{
+    margin-top:20px;
+    color:rgb(255, 91, 255);
+}
+
+#starter2{
+    opacity:0;
+    margin-top:10%;
+}
+
+#starter1{
+    opacity:0;
+}
+
+.fadeout{
+    animation:fadeout 2s ease-in forwards;
+}
+
+#button{
+    opacity:0;
+}
+
+
+@keyframes typewriting{
+    from{width:0%}
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{border-color:transparent;}
+}
+
+@keyframes fadeout{
+    from{opacity:1}
+    to{opacity:0}
+}
+
+#c{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+
+
+/*nav*/
+
+nav ul{
+    margin-left:0%;
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:0%;
+    flex-direction: column;
+    margin-top:0px;
+    height:100vh;
+    width:160px;
+    border-right:#666 solid 5px;
+    box-sizing: border-box;
+    align-items: left;
+    list-style-type:none;
+    background-color:rgba(0, 0, 44, 0.95);
+}
+
+
+
+nav ul li{
+    margin-left:0%;
+    text-decoration:none;
+    width:150px;
+    padding-left:10px;
+    padding-bottom:15px;
+    display:block;
+    border-bottom:#666 5px solid;
+    -webkit-text-fill-color:white;
+    padding-top:20px;
+
+}
+nav ul li:first-child{
+    padding-top:15px;
+    justify-self: center;
+}
+
+nav ul li:active{
+    background-color:aqua;
+}
+
+nav ul li:hover{
+    background-color:red;
+}
+
+
+
+li img{
+    width:15px;
+    height:15px;
+}
+
+
+/*box*/
+html {
+    scroll-snap-type: y mandatory;
+    timeline-scope: --section;
+    }
+
+.section {
+    height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    view-timeline: --section;
+
+}
+
+.content {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:150px;
+
+    animation: blinky ease-in-out both;
+    animation-timeline: --section;
+}
+
+@keyframes blinky {
+0%,
+100% {
+    filter: blur(var(--blur)) contrast(var(--contrast));
+    opacity: 0;
+    visibility: hidden;
+}
+
+50% {
+    filter: blur(0) contrast(1);
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+.fadein{
+    animation: fadein 1s ease-in;
+}
+
+.fadeinslow{
+    animation:fadein 10s ease-in;
+}
+
+@keyframes fadein{
+    from{opacity:0}
+    to{opacity:1}
+
+}
+
+
+.evenstyle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+}
+
+.textbox{
+    width:55vw;
+    height:fit-content;
+    padding:20px;
+    border-left:solid 5px red;
+    border-radius:5px;
+    color:white;
+}
+
+.textbox p{
+    font-size:20px;
+}
+
+.textbox h1{
+    font-size:48px;
+}
+
+.imgbox{
+    width:25vw;
+    border-radius:20px;
+    color:white;
+    overflow: hidden;
+}
+
+.imgbox p{
+    font-size: 0.75rem;
+    color:#666;
+}
+
+.imgbox img{
+    width:20vw;
+    height:auto;
+    background-color:beige;
+
+}
+
+
+/**/
+.landing{
+    border-left:none;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    width:auto;
+    font-size:24px;
+    border-right:solid 3px red;
+
+
+}
+
+.typing{
+    overflow:hidden;
+    white-space: nowrap;
+    border-right:3px solid;
+    animation: typewriting 4s steps(50,end) forwards, blink 0.7s step-end infinite alternate;
+}
