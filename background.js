@@ -30,8 +30,7 @@ window.onload = function(argument) {
 		for (key in words) {
 			words_attr.push(new Word(key));
 		}
-		console.log(words_attr.length);
-
+        
 		function animation() {
 			for (var i = 0; i < words_attr.length; i++) {
 				c.font = words_attr[i].font;
